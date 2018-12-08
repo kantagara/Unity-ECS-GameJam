@@ -20,10 +20,7 @@ public class HelloMovementSpeedSystem : JobComponentSystem
         // If this thing's X position is more than 2x its speed, reset X position to 0.
         public void Execute(ref Position Position, [ReadOnly]ref HelloMovementSpeed movementSpeed)
         {
-
-
             float moveSpeed = movementSpeed.Value * dT;
-            float moveLimit = movementSpeed.Value * 2;
             Position.Value = Position.Value + moveSpeed * (ciljPozicija-Position.Value) ;
 
         }
@@ -31,27 +28,16 @@ public class HelloMovementSpeedSystem : JobComponentSystem
 
     private ComponentGroup _componentGroup;
 
-    protected override void OnCreateManager()
+    protected override void OnStartRunning()
     {
-        _componentGroup = GetComponentGroup(typeof(CiljPosition), typeof(Position));
+        _componentGroup = GetComponentGroup(typeof(CiljPosition), typeof(Position));;
     }
 
     // OnUpdate runs on the main thread.
     protected override JobHandle OnUpdate(JobHandle inputDependencies)
     {
-        GameObject ciljStari = GameObject.Find("RotatingCube"); //optimizuj
-        Debug.Log(ciljStari.transform.position);
-        
-        var uniqueEnemies = new List<CiljPosition>(2);
-
-        EntityManager.GetAllUniqueSharedComponentData(uniqueEnemies);
-        CiljPosition cilj = uniqueEnemies[1];
-
-        _componentGroup.SetFilter(cilj);
-
-        
-        
-        var job = new HelloMovementSpeedJob() { dT = Time.deltaTime, ciljPozicija = ciljStari};
+        var job = new HelloMovementSpeedJob() { dT = Time.deltaTime, ciljPozicija = 
+            EntityManager.GetComponentData<Position>(_componentGroup.GetEntityArray()[0]).Value};
         return job.Schedule(this, inputDependencies);
     }
 }

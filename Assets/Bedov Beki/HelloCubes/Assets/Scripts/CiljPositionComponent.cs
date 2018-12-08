@@ -10,5 +10,4 @@ public struct CiljPosition : IComponentData
 }
 
 // ComponentDataWrapper is for creating a Monobehaviour representation of this component (for editor support).
-[UnityEngine.DisallowMultipleComponent]
 public class CiljPositionComponent : ComponentDataWrapper<CiljPosition> { }
