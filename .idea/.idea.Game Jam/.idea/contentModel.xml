@@ -50,10 +50,20 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="EnemyMovementComponent.cs" t="Include" />
-          <e p="EnemyMovementSystem.cs" t="Include" />
-          <e p="WaveGeneratorComponent.cs" t="Include" />
-          <e p="WaveGeneratorSystem.cs" t="Include" />
+          <e p="ECS" t="Include">
+            <e p="Collision" t="Include">
+              <e p="CircleColliderComponent.cs" t="Include" />
+              <e p="CircleColliderSystem.cs" t="Include" />
+              <e p="CollisionList.cs" t="Include" />
+              <e p="TagComponent.cs" t="Include" />
+            </e>
+            <e p="EnemyMovementComponent.cs" t="Include" />
+            <e p="EnemyMovementSystem.cs" t="Include" />
+            <e p="PlayerController.cs" t="Include" />
+            <e p="WaveGeneratorComponent.cs" t="Include" />
+            <e p="WaveGeneratorSystem.cs" t="Include" />
+          </e>
+          <e p="TagType.cs" t="Include" />
         </e>
       </e>
       <e p="Game Jam.sln" t="IncludeFlat" />

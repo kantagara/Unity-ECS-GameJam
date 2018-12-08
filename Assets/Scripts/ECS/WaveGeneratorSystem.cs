@@ -5,17 +5,19 @@ using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class WaveGeneratorSystem : ComponentSystem
 {
     ComponentGroup m_Spawners;
-    private float _time;
-    
+    private GameObject _gameObject;
     
     protected override void OnCreateManager()
     {
         m_Spawners = GetComponentGroup(typeof(WaveGenerator), typeof(Position));
+        _gameObject = GameObject.Find("");
     }
+    
     
     protected override void OnUpdate()
     {
@@ -25,23 +27,17 @@ public class WaveGeneratorSystem : ComponentSystem
         
         m_Spawners.SetFilter(spawner);
         
-        if (Time.time - _time > spawner.time)
-        {
+        
             var spawnedCubeEntity = EntityManager.Instantiate(spawner.Prefab);
-
+            var randomPosition = spawner.Positions[Random.Range(0, spawner.Positions.Length)];
+            
             // Set the position of the newly spawned cube to the origin.
             var position = new Position
             {
-                Value = new float3
-                {
-                    x = UnityEngine.Random.Range(-2f, 2f),
-                    y = UnityEngine.Random.Range(-2f, 2f),
-                    z = UnityEngine.Random.Range(-2f, 2f)
-                }
+                Value = randomPosition.position
             };
             EntityManager.SetComponentData(spawnedCubeEntity, position);
-            _time = Time.time;
         }
          
-    }
+    
 }

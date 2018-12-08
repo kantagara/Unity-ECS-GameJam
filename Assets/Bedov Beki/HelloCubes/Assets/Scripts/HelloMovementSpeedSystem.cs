@@ -27,17 +27,19 @@ public class HelloMovementSpeedSystem : JobComponentSystem
     }
 
     private ComponentGroup _componentGroup;
-
+    private GameObject _player;
     protected override void OnStartRunning()
     {
         _componentGroup = GetComponentGroup(typeof(CiljPosition), typeof(Position));;
+        _player = GameObject.Find("");
+        
     }
 
     // OnUpdate runs on the main thread.
     protected override JobHandle OnUpdate(JobHandle inputDependencies)
     {
         var job = new HelloMovementSpeedJob() { dT = Time.deltaTime, ciljPozicija = 
-            EntityManager.GetComponentData<Position>(_componentGroup.GetEntityArray()[0]).Value};
+             _player.transform.position};
         return job.Schedule(this, inputDependencies);
     }
 }
