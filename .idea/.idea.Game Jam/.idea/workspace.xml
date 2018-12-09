@@ -2,16 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a1acb1e-5678-455a-bd5c-c28d9ce66840" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game Jam/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game Jam/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game Jam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game Jam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cube.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Metak.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Metak.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/Collision/CircleColliderSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/Collision/CircleColliderSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/EnemyMovementComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/EnemyMovementComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/EnemyMovementSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/EnemyMovementSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/WaveGeneratorComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/WaveGeneratorComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/WaveGeneratorSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/WaveGeneratorSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TagType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TagType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScena.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScena.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ECS/WaveGeneratorSystemBullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ECS/WaveGeneratorSystemBullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/BulletComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/BulletComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/BulletSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/BulletSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/InputComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/InputComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/InputSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/InputSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerRotationSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerRotationSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/RotationComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/RotationComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/RotationSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/RotationSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,22 +33,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cs" value="36" />
+          <entry key="cs" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="C#" value="36" />
+          <entry key="C#" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="8150" />
+          <entry key="cs" value="8176" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="8150" />
+          <entry key="C#" value="8176" />
         </counts>
       </usages-collector>
     </session>
@@ -89,15 +93,76 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/ECS/GridComponent.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+            <state relative-caret-position="285">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <marker date="1544318430360" expanded="true" signature="6:60" ph="..." />
                 <marker date="1544318430360" expanded="true" signature="112:146" ph="{...}" />
                 <marker date="1544318430360" expanded="true" signature="203:211" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ECS/WaveGeneratorSystemBullet.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+              <folding>
+                <marker date="1544325364630" expanded="false" signature="6:203" ph="..." />
+                <marker date="1544325364630" expanded="true" signature="261:2324" ph="{...}" />
+                <marker date="1544325364630" expanded="true" signature="361:460" ph="{...}" />
+                <marker date="1544325364630" expanded="true" signature="509:2307" ph="{...}" />
+                <marker date="1544325364630" expanded="true" signature="747:832" ph="/* if (Time.time - time &lt;= spawner.time) ... */" />
+                <marker date="1544325364630" expanded="true" signature="869:2301" ph="{...}" />
+                <marker date="1544325364630" expanded="true" signature="1141:1210" ph="{...}" />
+                <marker date="1544325364630" expanded="true" signature="1559:1662" ph="{...}" />
+                <marker date="1544325364630" expanded="true" signature="1959:2040" ph="{...}" />
+                <marker date="1544325364630" expanded="true" signature="2165:2218" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ECS/WaveGeneratorComponentBullet.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+              <folding>
+                <marker date="1544322172427" expanded="false" signature="7:55" ph="..." />
+                <marker date="1544322172427" expanded="true" signature="128:219" ph="{...}" />
+                <marker date="1544322172427" expanded="true" signature="312:321" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Library/Unity/cache/packages/packages.unity.com/com.unity.entities@0.0.12-preview.21/Unity.Entities.Hybrid/GameObjectEntity.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="113">
+              <caret line="261" column="13" selection-start-line="261" selection-start-column="13" selection-end-line="261" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player/BulletSystem.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <marker date="1544288762000" expanded="false" signature="6:151" ph="..." />
+                <marker date="1544288762000" expanded="true" signature="200:825" ph="{...}" />
+                <marker date="1544288762000" expanded="true" signature="308:644" ph="{...}" />
+                <marker date="1544288762000" expanded="true" signature="424:638" ph="{...}" />
+                <marker date="1544288762000" expanded="true" signature="536:628" ph="/* var rot = math.forward(data2.Value); ... */" />
+                <marker date="1544288762000" expanded="true" signature="708:808" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -108,15 +173,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
               <caret line="634" column="39" selection-start-line="634" selection-start-column="39" selection-end-line="634" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.entities@0.0.12-preview.21/Unity.Entities/EntityManager.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="585" column="32" selection-start-line="585" selection-start-column="32" selection-end-line="585" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -166,50 +222,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ECS/WaveGeneratorComponent.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-              <folding>
-                <marker date="1544322172587" expanded="false" signature="7:55" ph="..." />
-                <marker date="1544322172587" expanded="true" signature="122:215" ph="{...}" />
-                <marker date="1544322172587" expanded="true" signature="296:305" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ECS/WaveGeneratorSystem.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
-              <folding>
-                <marker date="1544322340308" expanded="false" signature="6:203" ph="..." />
-                <marker date="1544322340308" expanded="true" signature="255:1322" ph="{...}" />
-                <marker date="1544322340308" expanded="true" signature="391:527" ph="{...}" />
-                <marker date="1544322340308" expanded="true" signature="576:1305" ph="{...}" />
-                <marker date="1544322340308" expanded="true" signature="1165:1220" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ECS/EnemyMovementComponent.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-              <folding>
-                <marker date="1544322172587" expanded="false" signature="6:60" ph="..." />
-                <marker date="1544322172587" expanded="true" signature="121:149" ph="{...}" />
-                <marker date="1544322172587" expanded="true" signature="224:228" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -231,7 +243,9 @@
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ECS/Collision/CollisionList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ECS/Collision/DestroySystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Library/Unity/cache/packages/packages.unity.com/com.unity.entities@0.0.12-preview.21/Unity.Entities.Hybrid/GameObjectEntity.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Bedov Beki/HelloCube/Assets/Scripts/HelloRotationSpeedSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/BulletSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ECS/GridComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ECS/WaveGeneratorSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Library/Unity/cache/packages/packages.unity.com/com.unity.entities@0.0.12-preview.21/Unity.Rendering.Hybrid/MeshInstanceRendererSystem.cs" root0="SKIP_HIGHLIGHTING" />
@@ -251,7 +265,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Bedov Beki/HelloCubes/Assets/Scripts/HelloRotationSpeedComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/99258562-0D64-4271-98DD-F3A0E1467733/21/f1491816/Func`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TagType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ECS/WaveGeneratorComponentBullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.entities@0.0.12-preview.21/Unity.Entities/Iterators/ComponentGroup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ECS/WaveGeneratorSystemBullet.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -279,6 +295,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ECS/Collision/CircleColliderSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ECS/EnemyMovementSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ECS/GridComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ECS/WaveGeneratorSystemBullet.cs" />
       </list>
     </option>
   </component>
@@ -329,6 +346,12 @@
             </path>
             <path>
               <item name="Project" type="e068e287:UnityExplorerRootNode" />
+              <item name="Assets" type="48f920db:UnityExplorerNode$AssetsRoot" />
+              <item name="Scripts" type="1045f7f1:UnityExplorerNode" />
+              <item name="Player" type="1045f7f1:UnityExplorerNode" />
+            </path>
+            <path>
+              <item name="Project" type="e068e287:UnityExplorerRootNode" />
               <item name="Packages" type="4e2708dd:PackagesRoot" />
             </path>
             <path>
@@ -341,6 +364,13 @@
               <item name="Packages" type="4e2708dd:PackagesRoot" />
               <item name="Read only" type="7f48d1bd:ReadOnlyPackagesRoot" />
               <item name="com.unity.entities@0.0.12-preview.21" type="a82a7030:PackageNode" />
+            </path>
+            <path>
+              <item name="Project" type="e068e287:UnityExplorerRootNode" />
+              <item name="Packages" type="4e2708dd:PackagesRoot" />
+              <item name="Read only" type="7f48d1bd:ReadOnlyPackagesRoot" />
+              <item name="com.unity.entities@0.0.12-preview.21" type="a82a7030:PackageNode" />
+              <item name="Unity.Entities.Hybrid" type="1045f7f1:UnityExplorerNode" />
             </path>
             <path>
               <item name="Project" type="e068e287:UnityExplorerRootNode" />
@@ -399,12 +429,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1544269483882</updated>
-      <workItem from="1544269485782" duration="39815000" />
+      <workItem from="1544269485782" duration="41972000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39815000" />
+    <option name="totallyTimeSpent" value="41972000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -420,7 +450,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973376" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973376" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="NuGet" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
@@ -433,7 +463,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -797,12 +827,65 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/ECS/GridComponent.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        <state relative-caret-position="285">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <marker date="1544318430360" expanded="true" signature="6:60" ph="..." />
             <marker date="1544318430360" expanded="true" signature="112:146" ph="{...}" />
             <marker date="1544318430360" expanded="true" signature="203:211" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Unity/cache/packages/packages.unity.com/com.unity.entities@0.0.12-preview.21/Unity.Entities.Hybrid/GameObjectEntity.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="261" column="13" selection-start-line="261" selection-start-column="13" selection-end-line="261" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ECS/WaveGeneratorComponentBullet.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <marker date="1544322172427" expanded="false" signature="7:55" ph="..." />
+            <marker date="1544322172427" expanded="true" signature="128:219" ph="{...}" />
+            <marker date="1544322172427" expanded="true" signature="312:321" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player/BulletSystem.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <marker date="1544288762000" expanded="false" signature="6:151" ph="..." />
+            <marker date="1544288762000" expanded="true" signature="200:825" ph="{...}" />
+            <marker date="1544288762000" expanded="true" signature="308:644" ph="{...}" />
+            <marker date="1544288762000" expanded="true" signature="424:638" ph="{...}" />
+            <marker date="1544288762000" expanded="true" signature="536:628" ph="/* var rot = math.forward(data2.Value); ... */" />
+            <marker date="1544288762000" expanded="true" signature="708:808" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ECS/WaveGeneratorSystemBullet.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+          <folding>
+            <marker date="1544325364630" expanded="false" signature="6:203" ph="..." />
+            <marker date="1544325364630" expanded="true" signature="261:2324" ph="{...}" />
+            <marker date="1544325364630" expanded="true" signature="361:460" ph="{...}" />
+            <marker date="1544325364630" expanded="true" signature="509:2307" ph="{...}" />
+            <marker date="1544325364630" expanded="true" signature="747:832" ph="/* if (Time.time - time &lt;= spawner.time) ... */" />
+            <marker date="1544325364630" expanded="true" signature="869:2301" ph="{...}" />
+            <marker date="1544325364630" expanded="true" signature="1141:1210" ph="{...}" />
+            <marker date="1544325364630" expanded="true" signature="1559:1662" ph="{...}" />
+            <marker date="1544325364630" expanded="true" signature="1959:2040" ph="{...}" />
+            <marker date="1544325364630" expanded="true" signature="2165:2218" ph="{...}" />
           </folding>
         </state>
       </provider>

@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 408592331061245543}
   - component: {fileID: 309701965037588983}
   - component: {fileID: 6001529128984541178}
-  - component: {fileID: 8392354319979605708}
   - component: {fileID: 2801204670155270671}
   - component: {fileID: 4198398458162146907}
+  - component: {fileID: 7220293099272487532}
   m_Layer: 0
   m_Name: Metak
   m_TagString: Untagged
@@ -157,20 +157,6 @@ MonoBehaviour:
     subMesh: 0
     castShadows: 0
     receiveShadows: 0
---- !u!114 &8392354319979605708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1487425228206676949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed76cab8b7eb31c4ab9933719c060b92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SerializedData:
-    Speed: 20
 --- !u!114 &2801204670155270671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,14 +166,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1487425228206676949}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 896132a1f90137e48bd085ca6b811111, type: 3}
+  m_Script: {fileID: 11500000, guid: ceed00cb4fb9045c9ba631298e0d6bb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_SerializedData:
-    Position:
-      x: 0
-      y: 0
-      z: 0
+    Speed: 1.48
 --- !u!114 &4198398458162146907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,3 +190,20 @@ MonoBehaviour:
         y: 0
         z: 0
         w: 1
+--- !u!114 &7220293099272487532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487425228206676949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d414e01d24f34844a914db12f61b219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedData:
+    Position:
+      x: 0
+      y: 0
+      z: 0

@@ -29,7 +29,7 @@ public class WaveGeneratorSystemBullet : ComponentSystem
         //{
         //    return;
         //}
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
             //Instanciranje metka
             var spawnedCubeEntity = EntityManager.Instantiate(spawner.Prefab);
@@ -47,8 +47,8 @@ public class WaveGeneratorSystemBullet : ComponentSystem
             var mouse_pos = Input.mousePosition;
             var layerMask = LayerMask.GetMask("Floor");
             var cameraRay = Camera.main.ScreenPointToRay(mouse_pos);
-            
-            if (Physics.Raycast(cameraRay, out var hit, 100, layerMask))
+            RaycastHit hit;
+            if (Physics.Raycast(cameraRay, out hit, 100, layerMask))
             {
                 mouse_pos = hit.point;
                 //mouse_pos.z = 0f;
