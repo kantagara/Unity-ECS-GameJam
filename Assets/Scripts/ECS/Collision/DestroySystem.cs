@@ -9,7 +9,7 @@ using Unity.Jobs;
 using Unity.Transforms;
 using UnityEngine;
 
-public class DestroySystem : JobComponentSystem
+public class DestroySystem : ComponentSystem
 {
     private ComponentGroup _componentGroup;
 
@@ -20,7 +20,7 @@ public class DestroySystem : JobComponentSystem
     }
 
 
-    protected override JobHandle OnUpdate(JobHandle inputDeps)
+    protected override void OnUpdate()
     {
         _componentGroup = GetComponentGroup(typeof(Position), typeof(Tag), typeof(Destroyable), typeof(CircleCollider));
 

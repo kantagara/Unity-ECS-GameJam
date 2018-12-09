@@ -16,9 +16,15 @@ public class BulletSystem : JobComponentSystem
 
         public void Execute(ref Position data0, ref Target data2, ref Bullet data3)
         {
-           
-            data2.Position.z = 0;
-            data0.Value += data2.Position;
+            //Debug.Log(data0.Value);
+            //Debug.Log(data2.Position);
+
+            var forward = data2.Position - data0.Value;
+            var go = new float3(forward.x, forward.y, 0);
+            //data2.Position.z = 0;
+            data0.Value = data0.Value + data2.Position;
+            //var heading =data2.Position - data0.Value;
+
             //var rot = math.forward(data2.Value);
             //data0.Value += new Vector3(1f, 0f, 0f);
         }

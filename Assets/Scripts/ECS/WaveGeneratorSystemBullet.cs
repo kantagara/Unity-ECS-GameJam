@@ -10,11 +10,13 @@ using Random = UnityEngine.Random;
 public class WaveGeneratorSystemBullet : ComponentSystem
 {
     ComponentGroup m_Spawners;
+    ComponentGroup player;
     float time;
     
     protected override void OnCreateManager()
     {
         m_Spawners = GetComponentGroup(typeof(WaveGeneratorBullet), typeof(Position));
+        player = GetComponentGroup(typeof(Player),typeof(Position));
     }
     
     
@@ -23,7 +25,9 @@ public class WaveGeneratorSystemBullet : ComponentSystem
         var uniqueSpawners = new List<WaveGeneratorBullet>(2);
         EntityManager.GetAllUniqueSharedComponentData(uniqueSpawners);
         var spawner = uniqueSpawners[1];
-        
+
+
+
         m_Spawners.SetFilter(spawner);
         //if (Time.time - time <= spawner.time)
         //{
@@ -42,22 +46,32 @@ public class WaveGeneratorSystemBullet : ComponentSystem
 
             EntityManager.SetComponentData(spawnedCubeEntity, position);
 
-
+            Position PlayerPosition = EntityManager.GetComponentData<Position>(player.GetEntityArray()[0]);
 
             var mouse_pos = Input.mousePosition;
             var layerMask = LayerMask.GetMask("Floor");
-            var cameraRay = Camera.main.ScreenPointToRay(mouse_pos);
+            var point = Camera.main.ScreenPointToRay (mouse_pos);
             RaycastHit hit;
-            if (Physics.Raycast(cameraRay, out hit, 100, layerMask))
-            {
-                mouse_pos = hit.point;
-                //mouse_pos.z = 0f;
-            }
+            Debug.Log("mousePoint" + point);
+                //if (Physics.Raycast(cameraRay, out hit, 100, layerMask))
+                //{
+                   mouse_pos = Camera.main.ScreenToWorldPoint(point.origin);
+
+                     float2 inPerspective = 0f;
+            inPerspective.x = mouse_pos.x - PlayerPosition.Value.x;
+
+
+            inPerspective.y = mouse_pos.y - PlayerPosition.Value.y;
+            Debug.Log("pos" + position.Value);
+            Debug.Log("inPerspective" + inPerspective);
+            //    //mouse_pos.z = 0f;
+            //}
 
             var object_pos = EntityManager.GetComponentData<Position>(spawnedCubeEntity).Value;
-          
+
             //mouse_pos.y = mouse_pos.y - object_pos.y;
-            var angle = Mathf.Atan2(mouse_pos.y, mouse_pos.x) * Mathf.Rad2Deg;
+            //var angle = Mathf.Atan2(mouse_pos.y, mouse_pos.x) * Mathf.Rad2Deg;
+            var angle = Mathf.Atan2(inPerspective.x, inPerspective.y)  * Mathf.Rad2Deg;
 
             var rotation = new Rotation
             {
