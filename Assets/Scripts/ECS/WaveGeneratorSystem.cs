@@ -11,6 +11,7 @@ public class WaveGeneratorSystem : ComponentSystem
 {
     ComponentGroup m_Spawners;
     private GameObject _gameObject;
+    float time;
     
     protected override void OnCreateManager()
     {
@@ -26,18 +27,24 @@ public class WaveGeneratorSystem : ComponentSystem
         var spawner = uniqueSpawners[1];
         
         m_Spawners.SetFilter(spawner);
-        
-        
-            var spawnedCubeEntity = EntityManager.Instantiate(spawner.Prefab);
+        if (Time.time - time <= spawner.time)
+        {
+            return;
+        }
+
+        var spawnedCubeEntity = EntityManager.Instantiate(spawner.Prefab);
             var randomPosition = spawner.Positions[Random.Range(0, spawner.Positions.Length)];
-            
-            // Set the position of the newly spawned cube to the origin.
-            var position = new Position
+
+        time = Time.time;
+
+        // Set the position of the newly spawned cube to the origin.
+        var position = new Position
             {
                 Value = randomPosition.position
             };
             EntityManager.SetComponentData(spawnedCubeEntity, position);
-        }
+        
+    }
          
     
 }
