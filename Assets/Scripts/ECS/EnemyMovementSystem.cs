@@ -31,19 +31,17 @@ public class EnemyMovementSystem : JobComponentSystem
 
             float3 rezultujuca = ciljPozicija - Position.Value;
             rezultujuca = JedinicniVektor(rezultujuca);
-                
-            if (CollisionList.Exists(entity))
+            
+            var buffer = CollisionList[entity];
+
+            for (int i = 0; i < buffer.Length; i++)
             {
-                var buffer = CollisionList[entity];
+               if(buffer[i].Tag.Name == TagType.Enemy) {
 
-                for (int i = 0; i < buffer.Length; i++)
-                {
-                   if(buffer[i].Tag.Name == TagType.Enemy) {
-
-                    rezultujuca += JedinicniVektor(Position.Value - (buffer[i].Position.Value));
-                   }
-                } 
-            }
+                rezultujuca += JedinicniVektor(Position.Value - (buffer[i].Position.Value));
+               }
+            } 
+            
 
             float3 jedinicniVektorPlayer = JedinicniVektor(rezultujuca);
 

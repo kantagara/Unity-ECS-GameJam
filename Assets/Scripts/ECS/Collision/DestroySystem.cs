@@ -9,7 +9,7 @@ using Unity.Jobs;
 using Unity.Transforms;
 using UnityEngine;
 
-public class DestroySystem : ComponentSystem
+public class DestroySystem : JobComponentSystem
 {
     private ComponentGroup _componentGroup;
 
@@ -20,7 +20,7 @@ public class DestroySystem : ComponentSystem
     }
 
 
-    protected override void OnUpdate()
+    protected override JobHandle OnUpdate(JobHandle inputDeps)
     {
         _componentGroup = GetComponentGroup(typeof(Position), typeof(Tag), typeof(Destroyable), typeof(CircleCollider));
 
@@ -38,35 +38,29 @@ public class DestroySystem : ComponentSystem
             for (int j = 0; j < buffer.Length; j++)
             {
             
-            if (tag == TagType.Enemy && buffer[j].Tag.Name == TagType.Enemy)
-            {
-                //destroyable.ToDestroy = 1;
-            }
-       
+                if (tag == TagType.Enemy && buffer[j].Tag.Name == TagType.Bullet)
+                {
+                    destroyable.ToDestroy = 1;
+                }
+    
+                if (tag == TagType.Player && buffer[j].Tag.Name == TagType.Enemy)
+                {
+                    destroyable.ToDestroy = 1;
+                }
 
-            if (tag == TagType.Enemy && buffer[j].Tag.Name == TagType.Bullet)
-            {
-                destroyable.ToDestroy = 1;
             }
-
-            if (tag == TagType.Player && buffer[j].Tag.Name == TagType.Enemy)
-            {
-                destroyable.ToDestroy = 1;
-            }
+            if(destroyable.ToDestroy == 1)
+                nativeList.Add(array[i]);
+    
 
         }
-        if(destroyable.ToDestroy == 1)
-            nativeList.Add(array[i]);
-    
 
+        for(int i = 0; i < nativeList.Length; i++){
+            if(EntityManager.Exists(nativeList[i]))
+                EntityManager.DestroyEntity(nativeList[i]);
+        }
+    
+        nativeList.Clear();
+        nativeList.Dispose();
     }
-
-    for(int i = 0; i < nativeList.Length; i++){
-        if(EntityManager.Exists(nativeList[i]))
-        EntityManager.DestroyEntity(nativeList[i]);
-     }
-    
-    nativeList.Clear();
-    nativeList.Dispose();
-}
 }

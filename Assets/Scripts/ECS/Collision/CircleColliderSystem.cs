@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Linq;
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
@@ -31,6 +32,7 @@ public class CircleColliderSystem : JobComponentSystem
       {
          
          
+
          Buffer[entity].Clear();
          
          for (var i = 0; i < PositionArray.Length; i++)
@@ -75,13 +77,13 @@ public class CircleColliderSystem : JobComponentSystem
             EntityManager.AddBuffer<CollisionList>(_componentGroup.GetEntityArray()[i]);
          }
       }
-      
-      
+           
       return new CircleColliderJob(){
             PositionArray =  _componentGroup.GetComponentDataArray<Position>(), 
             CircleColliderArray = _componentGroup.GetComponentDataArray<CircleCollider>(),
             TagArray =  _componentGroup.GetComponentDataArray<Tag>(),
             Buffer = GetBufferFromEntity<CollisionList>()
+           
          }
          .Schedule(this, inputDeps);
    }
