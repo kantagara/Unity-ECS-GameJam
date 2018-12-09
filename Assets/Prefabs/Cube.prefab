@@ -13,6 +13,10 @@ GameObject:
   - component: {fileID: 7568579789759431073}
   - component: {fileID: 7568579789759431074}
   - component: {fileID: 6414141167390603141}
+  - component: {fileID: 6423647740258533238}
+  - component: {fileID: 7647529180974131339}
+  - component: {fileID: 7746896898682369646}
+  - component: {fileID: 5213706751975746558}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -72,7 +76,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SerializedData:
     mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-    material: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    material: {fileID: 2100000, guid: 05ef64592d7e04d5b8a93d54c97cf9d5, type: 2}
     subMesh: 0
     castShadows: 0
     receiveShadows: 0
@@ -93,3 +97,59 @@ MonoBehaviour:
       x: 0
       y: 0
       z: 0
+--- !u!114 &6423647740258533238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7568579789759431075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc8b7ef487b964f59850fa1a65e95592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedData:
+    Speed: 1
+--- !u!114 &7647529180974131339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7568579789759431075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1ec4685dde374d4cafc465b23e757f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedData:
+    Name: 0
+--- !u!114 &7746896898682369646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7568579789759431075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7558fd4dea69042d0be8643d7baa688e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedData:
+    Radius: 0.5
+--- !u!114 &5213706751975746558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7568579789759431075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 653a16ef8ff9d46b9b1f8e0ce6585b9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedData:
+    ToDestroy: 0

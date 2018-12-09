@@ -1,6 +1,7 @@
 
     public enum TagType
     {
-        Cube,
-        Bullet
+        Enemy,
+        Bullet,
+        Player
     }

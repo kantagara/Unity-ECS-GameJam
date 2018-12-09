@@ -5,7 +5,7 @@ using Unity.Mathematics;
 [Serializable]
 public struct EnemyMovement : IComponentData
 {
-    public float2 Speed;
+    public float Speed;
 }
 
 public class EnemyMovementComponent : ComponentDataWrapper<EnemyMovement>

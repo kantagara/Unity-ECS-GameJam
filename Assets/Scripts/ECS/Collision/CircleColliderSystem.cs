@@ -1,4 +1,6 @@
 ﻿
+using System;
+using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
@@ -11,7 +13,7 @@ public class CircleColliderSystem : JobComponentSystem
    private ComponentGroup _componentGroup;
 
    
-   //[BurstCompile]
+   [BurstCompile]
    struct CircleColliderJob : IJobProcessComponentDataWithEntity<Position, CircleCollider, Tag>
    {
       [ReadOnly]
@@ -27,7 +29,10 @@ public class CircleColliderSystem : JobComponentSystem
       public void Execute(Entity entity, int index, [ReadOnly]ref Position position,
          [ReadOnly]ref CircleCollider circleCollider, [ReadOnly] ref Tag data2)
       {
+         
+         
          Buffer[entity].Clear();
+         
          for (var i = 0; i < PositionArray.Length; i++)
          {
             var samePosition = position.Value == PositionArray[i].Value;
@@ -37,6 +42,7 @@ public class CircleColliderSystem : JobComponentSystem
                           math.pow((position.Value.y - PositionArray[i].Value.y), 2)) <
                 circleCollider.Radius + CircleColliderArray[i].Radius)
             {
+               
                Buffer[entity].Add(new CollisionList()
                {
                   Position =  PositionArray[i],
@@ -45,21 +51,32 @@ public class CircleColliderSystem : JobComponentSystem
             }
 
          }
-
-        }
+      }
    }
 
    protected override void OnStartRunning()
    {
-      _componentGroup = GetComponentGroup(typeof(CircleCollider), typeof(Position), typeof(Tag));
-      for (int i = 0; i < _componentGroup.GetEntityArray().Length; i++)
-      {
-         EntityManager.AddBuffer<CollisionList>(_componentGroup.GetEntityArray()[i]);
-      }
+      
    }
 
    protected override JobHandle OnUpdate(JobHandle inputDeps)
    {
+      _componentGroup = GetComponentGroup(typeof(CircleCollider), typeof(Position), typeof(Tag));
+      var array = _componentGroup.GetEntityArray();
+      for (int i = 0; i < array.Length; i++)
+      {
+         try
+         {
+            EntityManager.GetBuffer<CollisionList>(array[i]);
+         }
+         catch (Exception e)
+         {
+
+            EntityManager.AddBuffer<CollisionList>(_componentGroup.GetEntityArray()[i]);
+         }
+      }
+      
+      
       return new CircleColliderJob(){
             PositionArray =  _componentGroup.GetComponentDataArray<Position>(), 
             CircleColliderArray = _componentGroup.GetComponentDataArray<CircleCollider>(),
